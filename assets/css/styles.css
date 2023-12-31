@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  box-sizing: border-box;
+  font-family: "Orbitron";
+}
+
+:root {
+  --color1: #7700ff;
+  --color2: #00ff40;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+}
+
+.logo {
+  grid-row: 3/4;
+  grid-column: 2/20;
+  justify-self: center;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  grid-row: 4/5;
+  grid-column: 2/20;
+  justify-self: center;
+}
+
+.title span {
+  font-family: "Rubik Doodle Shadow";
+}
+
+.tic,
+.toe {
+  color: var(--color1);
+}
+
+.tac {
+  color: var(--color2);
+}
+
+.form {
+  width: 100%;
+  height: 100%;
+  grid-row: 6/11;
+  grid-column: 9/13;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 70px;
+}
+
+.input-box {
+  position: relative;
+  width: 100%;
+}
+
+.input-box input {
+  background-color: transparent;
+  color: #ffffff;
+  outline: none;
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  border-bottom: 1px solid var(--color1);
+}
+
+.input-box label {
+  position: absolute;
+  color: #ffffff;
+  top: 5px;
+  left: 5px;
+  cursor: text;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -25px;
+  left: 10px;
+  font-size: 0.9rem;
+  color: #1bff67;
+  width: auto;
+  padding: 5px;
+  border-bottom: none;
+  transition: all 0.2s;
+}
+
+.input-box input:focus,
+.input-box input:valid {
+  border: 1px solid var(--color1);
+  transition: all 0.4s;
+}
+
+.startBtn {
+  width: 60%;
+  height: 20%;
+}
+
+.startBtn,
+.resetBtn {
+  border: none;
+  background-color: transparent;
+  color: #ba7eff;
+  border: 3px solid var(--color1);
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.startBtn:hover {
+  border: 3px solid #1bff67;
+  color: #94ffb7;
+  transition: all 0.5s;
+}
+
+.board {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  padding: 2px;
+  grid-column: 8/14;
+  grid-row: 3/9;
+}
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2rem;
+  border: 1px solid var(--color1);
+  cursor: pointer;
+  color: var(--color2);
+  font-family: "Righteous";
+  font-size: 4rem;
+}
+
+.cell:nth-of-type(1),
+.cell:nth-of-type(2),
+.cell:nth-of-type(3) {
+  border-top: none;
+}
+
+.cell:nth-of-type(7),
+.cell:nth-of-type(8),
+.cell:nth-of-type(9) {
+  border-bottom: none;
+}
+
+.cell:nth-of-type(1),
+.cell:nth-of-type(4),
+.cell:nth-of-type(7) {
+  border-left: none;
+}
+
+.cell:nth-of-type(3),
+.cell:nth-of-type(6),
+.cell:nth-of-type(9) {
+  border-right: none;
+}
+
+.winText {
+  color: #ffffff;
+  grid-row: 9/10;
+  grid-column: 8/14;
+  font-size: 2rem;
+  justify-content: center;
+  text-align: center;
+}
+
+.resetBtn {
+  width: 100%;
+  max-width: 200px;
+  grid-row: 11/12;
+  grid-column: 2/20;
+  justify-self: center;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.resetBtn:hover {
+  border: 3px solid #1bff67;
+  color: #94ffb7;
+  transition: all 0.5s;
+}
+
+.active {
+  display: inherit;
+}
+
+.inactive {
+  display: none;
+}
+
+@media screen and (max-width: 1030px) {
+  .form {
+    grid-column: 7/16;
+  }
+
+  .board {
+    grid-column: 6/16;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .logo {
+    width: 40%;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .form {
+    grid-column: 5/17;
+  }
+
+  .board {
+    grid-column: 4/18;
+    grid-row: 3/9;
+  }
+
+  .winText {
+    font-size: 1.5rem;
+    grid-column: 2/20;
+  }
+}

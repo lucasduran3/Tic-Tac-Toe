@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron&family=Rubik+Doodle+Shadow&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="assets/images/xoicon.svg" />
+    <title>tic tac</title>
+  </head>
+  <body>
+    <div class="container">
+      <img src="assets/images/xologo.svg" alt="" class="logo menuitem" />
+      <h1 class="title menuitem">
+        <span class="tic">TIC</span> <span class="tac">TAC</span>
+        <span class="toe">TOE</span>
+      </h1>
+      <form action="" class="form menuitem">
+        <div class="input-box">
+          <input type="text" name="player1" id="namep1" required />
+          <label for="namep1">Player 1 name</label>
+        </div>
+        <div class="input-box">
+          <input type="text" name="player2" id="namep2" required />
+          <label for="namep2">Player 2 name</label>
+        </div>
+        <button type="button" class="startBtn">▶</button>
+      </form>
+      <div class="board inactive"></div>
+      <div class="winText inactive"></div>
+      <button class="resetBtn inactive">▶ PLAY AGAIN</button>
+    </div>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
