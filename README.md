@@ -1,5 +1,5 @@
 # Tic-Tac-Toe
 
-                  ![TicTacToe](https://github.com/lucasduran3/Tic-Tac-Toe/blob/main/assets/images/xologo.svg)
+                  ![](https://github.com/lucasduran3/Tic-Tac-Toe/blob/main/assets/images/xologo.svg)
 
 Tic Tac Toe game created to practice Javascript functions and IIFE
